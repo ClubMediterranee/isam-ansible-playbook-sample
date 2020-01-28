@@ -1,0 +1,9 @@
+---
+# Export
+#   export certificate requests
+- hosts: "{{ hosts | default('all')}}"
+  connection: local
+  gather_facts: no
+  roles:
+    - role: base/export_ssl_certificate_requests
+      tags: export_ssl_certificate_requests
