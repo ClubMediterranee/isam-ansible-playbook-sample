@@ -1,0 +1,9 @@
+---
+# Receive
+#   receive ssl certificates
+- hosts: "{{ hosts | default('all')}}"
+  connection: local
+  gather_facts: no
+  roles:
+    - role: base/receive_ssl_certificates
+      tags: receive_ssl_certificates
